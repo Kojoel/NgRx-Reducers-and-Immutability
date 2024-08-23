@@ -1,0 +1,22 @@
+<div class="main-container">
+    <p id="title">Counter App</p>
+    <div class="container">
+        <button class="btn-dec" (click)="decrement()">-</button>
+        <div class="counter">{{ count$ | async }}</div>
+        <button class="btn-inc" (click)="increment()">+</button>
+    </div>
+    <div class="spec-value">
+        <label for="setCountValue">Set Initial Value</label>
+        <input type="number" name="" id="setCountValue" #value (keyup)="setValue(value.value)">
+    </div>
+    <p class="increasebyrange">Increase by range</p>
+    <div class="incrementby">
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">1</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">5</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">50</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">100</button>
+    </div>
+    <div class="refresh" (click)="reset()">
+        Refresh
+    </div>
+</div>
